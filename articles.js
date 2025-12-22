@@ -11,7 +11,7 @@ const articles = {
         {title: "World Event 2", date: "Dec 21, 2025", summary: "Summary of world event 2."},
     ],
     business: [
-        {title: "Business News 1", date: "Dec 22, 2025", summary: "Summary of business news 1."},
+        {title: "SUDAR", date: "Dec 22, 2025", summary: "Summary of business news 1."},
     ],
     tech: [
         {title: "Tech Update 1", date: "Dec 22, 2025", summary: "Summary of tech update 1."},

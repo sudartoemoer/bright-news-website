@@ -1,74 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright News</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bright Daily News</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="branding">
-            <h1>Bright News</h1>
-            <p>Your trusted source for news</p>
+<header>
+    <div class="branding">
+        <h1>Bright Daily News</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="world.html">World</a></li>
+            <li><a href="business.html">Business</a></li>
+            <li><a href="tech.html">Technology</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="featured">
+        <h2>Featured Article</h2>
+        <article>
+            <h3>Global Climate Summit Concludes</h3>
+            <p class="meta">Dec 22, 2025 | By Jane Doe</p>
+            <p>The global climate summit concluded successfully after three days of intense discussions. Delegates from 196 countries reached key agreements on emissions reductions and climate finance.</p>
+            <a href="article1.html">Read more</a>
+        </article>
+    </section>
+
+    <section class="categories">
+        <div class="category">
+            <h2>World</h2>
+            <article>
+                <h3>New Diplomatic Treaty Signed</h3>
+                <p class="meta">Dec 21, 2025 | By John Smith</p>
+                <p>Two major countries signed a historic treaty to strengthen trade and security ties.</p>
+                <a href="article2.html">Read more</a>
+            </article>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#world">World</a></li>
-                <li><a href="#business">Business</a></li>
-                <li><a href="#tech">Technology</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="category">
+            <h2>Business</h2>
+            <article>
+                <h3>Stock Market Hits Record High</h3>
+                <p class="meta">Dec 22, 2025 | By Alice Brown</p>
+                <p>Global stock markets surged today, marking an all-time high in major indices.</p>
+                <a href="article3.html">Read more</a>
+            </article>
+        </div>
+        <div class="category">
+            <h2>Technology</h2>
+            <article>
+                <h3>New AI Breakthrough Announced</h3>
+                <p class="meta">Dec 22, 2025 | By Bob White</p>
+                <p>A revolutionary AI system promises faster computation and advanced reasoning capabilities.</p>
+                <a href="article4.html">Read more</a>
+            </article>
+        </div>
+    </section>
+</main>
 
-    <!-- MAIN CONTENT -->
-    <main>
-        <!-- FEATURED -->
-        <section class="featured" id="featured">
-            <h2>Featured Article</h2>
-            <div id="featured-article"></div>
-        </section>
+<aside>
+    <section class="trending">
+        <h3>Trending</h3>
+        <ul>
+            <li><a href="article1.html">Global Climate Summit Concludes</a></li>
+            <li><a href="article2.html">New Diplomatic Treaty Signed</a></li>
+            <li><a href="article4.html">New AI Breakthrough Announced</a></li>
+        </ul>
+    </section>
+</aside>
 
-        <!-- CATEGORIES -->
-        <section class="categories">
-            <div class="category" id="world">
-                <h2>World</h2>
-                <div class="articles" id="world-articles"></div>
-            </div>
-            <div class="category" id="business">
-                <h2>Business</h2>
-                <div class="articles" id="business-articles"></div>
-            </div>
-            <div class="category" id="tech">
-                <h2>Technology</h2>
-                <div class="articles" id="tech-articles"></div>
-            </div>
-        </section>
-    </main>
-
-    <!-- SIDEBAR -->
-    <aside>
-        <section class="trending">
-            <h3>Trending</h3>
-            <ul id="trending-list"></ul>
-        </section>
-        <section class="newsletter">
-            <h3>Newsletter</h3>
-            <form>
-                <input type="email" placeholder="Your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
-    </aside>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 Global Daily News</p>
-    </footer>
-
-    <script src="articles.js"></script>
-    <script src="script.js"></script>
+<footer>
+    <p>&copy; 2025 Global Daily News</p>
+</footer>
 </body>
 </html>
