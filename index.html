@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="branding">
+            <h1>Bright News</h1>
+            <p>Your trusted source for news</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#world">World</a></li>
+                <li><a href="#business">Business</a></li>
+                <li><a href="#tech">Technology</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- FEATURED -->
+        <section class="featured" id="featured">
+            <h2>Featured Article</h2>
+            <div id="featured-article"></div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="categories">
+            <div class="category" id="world">
+                <h2>World</h2>
+                <div class="articles" id="world-articles"></div>
+            </div>
+            <div class="category" id="business">
+                <h2>Business</h2>
+                <div class="articles" id="business-articles"></div>
+            </div>
+            <div class="category" id="tech">
+                <h2>Technology</h2>
+                <div class="articles" id="tech-articles"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside>
+        <section class="trending">
+            <h3>Trending</h3>
+            <ul id="trending-list"></ul>
+        </section>
+        <section class="newsletter">
+            <h3>Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Global Daily News</p>
+    </footer>
+
+    <script src="articles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
