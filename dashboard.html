@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Dashboard</h2>
+<p id="user"></p>
+
+<a href="create-post.html">Create Post</a><br>
+<a href="my-posts.html">My Posts</a>
+
+<script>
+if (localStorage.getItem("loggedIn") !== "true") {
+  location.href = "login.html";
+}
+
+document.getElementById("user").textContent =
+  "Logged in as: " + localStorage.getItem("username");
+</script>
+
+</body>
+</html>

@@ -19,6 +19,7 @@
             <li><a href="tech.html">Technology</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
 </header>
@@ -26,6 +27,8 @@
 <main>
     <section class="featured">
         <h2>Featured Article</h2>
+        <h2>Latest Posts</h2>
+    <div id="dynamic-posts"></div>
         <article>
             <h3>Global Climate Summit Concludes</h3>
             <p class="meta">Dec 22, 2025 | By Jane Doe</p>
@@ -79,5 +82,21 @@
 <footer>
     <p>&copy; 2025 Global Daily News</p>
 </footer>
+<script>
+  const posts = JSON.parse(localStorage.getItem("posts")) || [];
+  const container = document.getElementById("dynamic-posts");
+
+  posts.slice().reverse().forEach(post => {
+    const article = document.createElement("article");
+
+    article.innerHTML = `
+      <h3>${post.title}</h3>
+      <p class="meta">${post.date} | By ${post.author}</p>
+      <p>${post.content.substring(0, 150)}...</p>
+    `;
+
+    container.appendChild(article);
+  });
+</script>
 </body>
 </html>

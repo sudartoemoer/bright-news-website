@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My Posts</h2>
+<div id="posts"></div>
+
+<script>
+if (localStorage.getItem("loggedIn") !== "true") {
+  location.href = "login.html";
+}
+
+const posts = JSON.parse(localStorage.getItem("posts")) || [];
+const user = localStorage.getItem("username");
+const container = document.getElementById("posts");
+
+posts
+  .filter(p => p.author === user)
+  .forEach(p => {
+    const div = document.createElement("div");
+
+    div.innerHTML = `
+      <h3>${p.title}</h3>
+      <button onclick="editPost(${p.id})">Edit</button>
+      <button onclick="deletePost(${p.id})">Delete</button>
+      <hr>
+    `;
+
+    container.appendChild(div);
+  });
+
+function deletePost(id) {
+  const updated = posts.filter(p => p.id !== id);
+  localStorage.setItem("posts", JSON.stringify(updated));
+  location.reload();
+}
+
+function editPost(id) {
+  localStorage.setItem("editId", id);
+  location.href = "edit-post.html";
+}
+</script>
+
+</body>
+</html>

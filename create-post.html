@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Post</h2>
+
+<form id="postForm">
+  <input id="title" placeholder="title" required><br>
+  <textarea id="content" placeholder="content" required></textarea><br>
+  <button>Save</button>
+</form>
+
+<script>
+if (localStorage.getItem("loggedIn") !== "true") {
+  location.href = "login.html";
+}
+
+document.getElementById("postForm").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const posts = JSON.parse(localStorage.getItem("posts")) || [];
+
+  posts.push({
+    id: Date.now(),
+    title: title.value,
+    content: content.value,
+    author: localStorage.getItem("username")
+  });
+
+  localStorage.setItem("posts", JSON.stringify(posts));
+  location.href = "my-posts.html";
+});
+</script>
+
+</body>
+</html>

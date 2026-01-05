@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Edit Post</h2>
+
+<form id="editForm">
+  <input id="title" required><br>
+  <textarea id="content" required></textarea><br>
+  <button>Save</button>
+</form>
+
+<script>
+const posts = JSON.parse(localStorage.getItem("posts")) || [];
+const id = Number(localStorage.getItem("editId"));
+const post = posts.find(p => p.id === id);
+
+title.value = post.title;
+content.value = post.content;
+
+editForm.addEventListener("submit", e => {
+  e.preventDefault();
+
+  post.title = title.value;
+  post.content = content.value;
+
+  localStorage.setItem("posts", JSON.stringify(posts));
+  location.href = "my-posts.html";
+});
+</script>
+
+</body>
+</html>
